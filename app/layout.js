@@ -12,15 +12,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Urvish Shah | Robotics & Autonomous Systems",
+  title: "Akshay Gangakhedkar | Robotics & Autonomous Systems",
   description:
-    "Portfolio of Urvish Shah — robotics engineer focused on multi-robot systems, sensor fusion, SLAM, and learning-based control.",
-  metadataBase: new URL("https://urvish-portfolio-seven.vercel.app"),
+    "Portfolio of Akshay Gangakhedkar — robotics engineer focused on multi-robot systems, sensor fusion, SLAM, and learning-based control.",
+  metadataBase: new URL("https://Akshay-portfolio-seven.vercel.app"),
   openGraph: {
-    title: "Urvish Shah | Robotics & Autonomous Systems",
+    title: "Akshay Gangakhedkar | Robotics & Autonomous Systems",
     description:
       "Multi-robot coordination, motion capture, SLAM, embedded systems, and real-world robotics experimentation.",
-    url: "https://urvish-portfolio-seven.vercel.app",
+    url: "https://Akshay-portfolio-seven.vercel.app",
     type: "website",
   },
 };
