@@ -1,0 +1,1 @@
+You can interchange the RX,TX Pins depends on program
