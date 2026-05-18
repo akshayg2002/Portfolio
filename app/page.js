@@ -518,11 +518,11 @@ export default function Home() {
               <div className="text-xs text-gray-500">LinkedIn</div>
               <a
                 className="text-blue-600 underline underline-offset-4"
-                href="https://linkedin.com/in/yourlinkedin"
+                href="https://www.linkedin.com/in/akshay-gangakhedkar/"
                 target="_blank"
                 rel="noreferrer"
               >
-                linkedin.com/in/yourlinkedin
+                My LinkedIn
               </a>
             </div>
 
