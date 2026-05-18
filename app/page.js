@@ -194,7 +194,7 @@ export default function Home() {
 
   const mediaManufacturing = useMemo(
     () => [
-      { type: "image", src: "/images/manufacturing/m1.jpg", alt: "Cartesian Robotic Arm" },
+      { type: "image", src: "C:\Users\Akshay\OneDrive\Pictures\Screenshots 1\Screenshot 2026-05-18 151142.png", alt: "Cartesian Robotic Arm" },
       { type: "image", src: "/images/manufacturing/m2.jpg", alt: "FEA Stress Analysis" },
       { type: "image", src: "/images/manufacturing/m3.jpg", alt: "Injection Molding Setup" },
     ],
