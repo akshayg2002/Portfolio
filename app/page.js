@@ -293,26 +293,18 @@ export default function Home() {
 
           <Card
             title="Robotics Engineering Intern — Orbitist LLC"
-            meta="Holland, NY · Aug 2025 – Dec 2025"
+            meta="Holland, NY · May 2025 – Dec 2025"
             tags={["Agricultural Robotics", "Mechanical Design", "BOM", "Prototyping"]}
           >
             <ul className="list-disc ml-5 space-y-1">
               <li>Designed mechanical subsystems and developed architecture for agricultural robots navigating uneven vineyard terrain.</li>
               <li>Developed a full system Bill of Materials (BOM), achieving a 45% cost reduction through strategic component selection and design validation.</li>
-            </ul>
-          </Card>
-
-          <Card
-            title="Agricultural Robotics Intern — Orbitist LLC"
-            meta="Holland, NY · May 2025 – Aug 2025"
-            tags={["Dual-Robot Systems", "Field Data Collection", "4WD Conversion", "Amiga Robot"]}
-          >
-            <ul className="list-disc ml-5 space-y-1">
               <li>Researched and designed a dual-robot vineyard system featuring peer-to-peer docking and 2WD-to-4WD conversion for difficult terrain.</li>
               <li>Operated the Amiga robot in active vineyards, collecting field data to analyze phases of vine growth cycles.</li>
             </ul>
             <MediaGrid items={mediaAgrobot} />
           </Card>
+
 
           <Card
             title="Graduate Student Assistant — University at Buffalo"
