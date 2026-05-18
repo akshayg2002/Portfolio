@@ -125,6 +125,7 @@ function Card({ title, meta, tags = [], links = [], children }) {
 function Navbar() {
   const items = [
     { id: "top", label: "Home" },
+    { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
     { id: "research", label: "Research" },
     { id: "skills", label: "Skills" },
@@ -175,63 +176,27 @@ function Navbar() {
 export default function Home() {
   const mediaAgrobot = useMemo(
     () => [
-      {
-        type: "image",
-        src: "/images/agrobot/agrobot1.jpg",
-        alt: "Agrobot",
-      },
-      {
-        type: "image",
-        src: "/images/agrobot/agrobot2.jpg",
-        alt: "Agrobot Prototype",
-      },
-      {
-        type: "image",
-        src: "/images/agrobot/agrobot3.jpg",
-        alt: "Agricultural Robotics System",
-      },
+      { type: "image", src: "/images/agrobot/agrobot1.jpg", alt: "Agrobot in vineyard" },
+      { type: "image", src: "/images/agrobot/agrobot2.jpg", alt: "Agrobot Prototype" },
+      { type: "image", src: "/images/agrobot/agrobot3.jpg", alt: "Agricultural Robotics System" },
     ],
     []
   );
 
   const mediaCV = useMemo(
     () => [
-      {
-        type: "image",
-        src: "/images/cv/cv1.jpg",
-        alt: "Computer Vision",
-      },
-      {
-        type: "image",
-        src: "/images/cv/cv2.jpg",
-        alt: "Object Detection",
-      },
-      {
-        type: "image",
-        src: "/images/cv/cv3.jpg",
-        alt: "AI Pipeline",
-      },
+      { type: "image", src: "/images/cv/cv1.jpg", alt: "Computer Vision Pipeline" },
+      { type: "image", src: "/images/cv/cv2.jpg", alt: "Object Detection" },
+      { type: "image", src: "/images/cv/cv3.jpg", alt: "AI Inference" },
     ],
     []
   );
 
   const mediaManufacturing = useMemo(
     () => [
-      {
-        type: "image",
-        src: "/images/manufacturing/m1.jpg",
-        alt: "Manufacturing Project",
-      },
-      {
-        type: "image",
-        src: "/images/manufacturing/m2.jpg",
-        alt: "Automation Workflow",
-      },
-      {
-        type: "image",
-        src: "/images/manufacturing/m3.jpg",
-        alt: "Engineering System",
-      },
+      { type: "image", src: "/images/manufacturing/m1.jpg", alt: "Cartesian Robotic Arm" },
+      { type: "image", src: "/images/manufacturing/m2.jpg", alt: "FEA Stress Analysis" },
+      { type: "image", src: "/images/manufacturing/m3.jpg", alt: "Injection Molding Setup" },
     ],
     []
   );
@@ -239,34 +204,24 @@ export default function Home() {
   const skillGroups = useMemo(
     () => [
       {
-        title: "Programming",
-        items: ["Python", "C++", "MATLAB", "JavaScript"],
+        title: "Programming & Software",
+        items: ["Python", "C++ (Arduino IDE)", "MATLAB", "R", "ROS / ROS 2", "Git", "Linux", "PLC", "SCADA"],
       },
-
       {
         title: "Robotics & AI",
-        items: [
-          "Computer Vision",
-          "Machine Learning",
-          "OpenCV",
-          "Automation",
-          "Embedded Systems",
-        ],
+        items: ["Computer Vision", "Machine Learning", "OpenCV", "Gazebo", "MoveIt", "Kinematics", "PID Control", "RRT Path Planning"],
       },
-
+      {
+        title: "Modelling & Simulation",
+        items: ["AutoCAD", "Fusion 360", "Onshape", "SolidWorks", "Sketchup", "Simulink", "Simscape", "LabView"],
+      },
       {
         title: "Engineering",
-        items: [
-          "CAD",
-          "Manufacturing",
-          "Mechanical Design",
-          "Prototyping",
-        ],
+        items: ["FEA Stress Analysis", "Mechatronics", "Manufacturing Processes", "CNC Operation", "Prototyping", "P&ID", "HMI", "Electric Vehicles"],
       },
-
       {
-        title: "Tools",
-        items: ["Git", "Linux", "VS Code", "SolidWorks"],
+        title: "Block-Based & Automation Tools",
+        items: ["LabView", "Simulink", "UIPath", "Simscape"],
       },
     ],
     []
@@ -283,162 +238,236 @@ export default function Home() {
             Akshay Gangakhedkar
           </h1>
 
+          <p className="mt-1 text-sm text-gray-500">Buffalo, NY · akshayg20002@gmail.com · +1 (716) 617-1612</p>
+
           <p className="mt-3 text-sm text-gray-700 leading-relaxed max-w-3xl">
-            Mechanical Engineering graduate and robotics-focused engineer with
-            experience across automation, embedded systems, computer vision,
-            manufacturing systems, and intelligent robotics. My work combines
-            hardware prototyping, AI-driven perception, and real-world
-            engineering workflows to build scalable robotic and autonomous
-            systems.
+            MS Robotics candidate at the University at Buffalo with hands-on industry experience in agricultural robotics,
+            mechatronics, and manufacturing automation. My work spans autonomous robot design, computer vision pipelines,
+            embedded control systems, PLC/SCADA integration, and kinematic modeling — bridging hardware prototyping with
+            AI-driven perception for real-world deployment.
           </p>
 
           <div className="mt-5 flex flex-wrap gap-2">
             <Pill>Robotics</Pill>
+            <Pill>ROS / ROS 2</Pill>
             <Pill>Computer Vision</Pill>
             <Pill>Embedded Systems</Pill>
-            <Pill>Automation</Pill>
-            <Pill>Manufacturing</Pill>
+            <Pill>PLC / SCADA</Pill>
+            <Pill>Mechatronics</Pill>
             <Pill>Python</Pill>
             <Pill>Machine Learning</Pill>
+            <Pill>FEA</Pill>
+          </div>
+
+          {/* Education */}
+          <div className="mt-6 border-t border-gray-100 pt-5 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm">
+            <div>
+              <p className="font-semibold text-gray-900">University at Buffalo, SUNY</p>
+              <p className="text-gray-600">MS in Robotics (Engineering Science) · Aug 2024 – Jan 2026</p>
+              <p className="text-gray-500 text-xs mt-0.5">CGPA: 3.33 / 4.0</p>
+              <p className="text-gray-500 text-xs mt-1">
+                Robotics I &amp; II · Robot Control Systems · Machine Learning · Computer Vision ·
+                Collaborative Robotics · Robotics Algorithms · Digital Control Systems · Road Vehicle Dynamics
+              </p>
+            </div>
+            <div>
+              <p className="font-semibold text-gray-900">NMIMS University, MPSTME — Mumbai, India</p>
+              <p className="text-gray-600">BTech in Mechatronics Engineering · Aug 2020 – Jul 2024</p>
+              <p className="text-gray-500 text-xs mt-0.5">CGPA: 3.2 / 4.0</p>
+              <p className="text-gray-500 text-xs mt-1">
+                Industrial Robotics · Mechatronics Systems Design · Manufacturing Processes ·
+                PLC / SCADA / HMI · Modern Control Systems · AI &amp; ML · CAD · Electric Vehicles
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* EXPERIENCE */}
+      <Section
+        id="experience"
+        title="Professional Experience"
+        subtitle="Industry roles spanning agricultural robotics, graduate instruction, and mechatronics engineering."
+      >
+        <div className="grid grid-cols-1 gap-6">
+
+          <Card
+            title="Robotics Engineering Intern — Orbitist LLC"
+            meta="Holland, NY · Aug 2025 – Dec 2025"
+            tags={["Agricultural Robotics", "Mechanical Design", "BOM", "Prototyping"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Designed mechanical subsystems and developed architecture for agricultural robots navigating uneven vineyard terrain.</li>
+              <li>Developed a full system Bill of Materials (BOM), achieving a 45% cost reduction through strategic component selection and design validation.</li>
+            </ul>
+          </Card>
+
+          <Card
+            title="Agricultural Robotics Intern — Orbitist LLC"
+            meta="Holland, NY · May 2025 – Aug 2025"
+            tags={["Dual-Robot Systems", "Field Data Collection", "4WD Conversion", "Amiga Robot"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Researched and designed a dual-robot vineyard system featuring peer-to-peer docking and 2WD-to-4WD conversion for difficult terrain.</li>
+              <li>Operated the Amiga robot in active vineyards, collecting field data to analyze phases of vine growth cycles.</li>
+            </ul>
+            <MediaGrid items={mediaAgrobot} />
+          </Card>
+
+          <Card
+            title="Graduate Student Assistant — University at Buffalo"
+            meta="Buffalo, NY · Aug 2025 – Dec 2025"
+            tags={["Teaching", "Robotics", "MAE 493", "MAE 593"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Evaluated coursework and assignments for two robotics courses — MAE 493 (undergraduate) and MAE 593 (graduate).</li>
+            </ul>
+          </Card>
+
+          <Card
+            title="Mechatronics Engineering Intern — Miranda Automation"
+            meta="Mumbai, India · Dec 2023 – May 2024"
+            tags={["PLC", "HMI", "Industrial Machines", "Electrical Panels", "CNC"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Resolved PLC-based control system faults across 4 active production lines using HMI dashboards to monitor system health.</li>
+              <li>Assembled 15+ industrial machines (mixers, creamers) and 30+ electro-mechanical components including valves and sensors.</li>
+              <li>Wired 5 electrical panels and circuits, translated P&amp;IDs, and operated CNC and lathe machines per design specifications.</li>
+            </ul>
+          </Card>
+
+          <Card
+            title="Mechanical Engineering Intern — Pro Moulds Private Limited"
+            meta="Mumbai, India · May 2023 – Aug 2023"
+            tags={["Robotics", "FEA", "Fusion 360", "CAD", "Injection Molding"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Designed and simulated a Cartesian robotic arm for factory automation; performed FEA stress analysis in Fusion 360 to validate structural integrity and confirm safe load-bearing performance.</li>
+              <li>Generated Bills of Materials for multiple injection molding machines to assess automation ROI.</li>
+            </ul>
+          </Card>
+
+        </div>
+      </Section>
+
       {/* PROJECTS */}
       <Section
         id="projects"
-        title="Featured Projects"
+        title="Academic Projects"
         subtitle="Robotics, automation, embedded systems, and intelligent engineering systems."
       >
         <div className="grid grid-cols-1 gap-6">
 
           <Card
-            title="AgroBot – Autonomous Smart Farming Robot"
-            meta="Computer vision + autonomous navigation + agricultural automation"
-            tags={[
-              "Robotics",
-              "Computer Vision",
-              "Embedded Systems",
-              "Automation",
-              "Python",
-            ]}
+            title="Capstone: Robotic Manipulation for Injection Molding"
+            meta="Cartesian robotic arm design, kinematics, and structural validation"
+            tags={["FEA", "Kinematics", "DH Parameters", "Motion Planning", "Fusion 360"]}
           >
-            <div>
-              <ul className="list-disc ml-5 space-y-1">
-                <li>
-                  Developed an autonomous agricultural robot capable of
-                  assisting with smart farming workflows.
-                </li>
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Conducted FEA stress analysis on a Cartesian robotic arm under a 100 kg load, achieving a factor of safety of 11.95.</li>
+              <li>Modeled forward and inverse kinematics using DH parameters for motion planning and task execution.</li>
+            </ul>
+            <MediaGrid items={mediaManufacturing} />
+          </Card>
 
-                <li>
-                  Integrated computer vision pipelines for environmental sensing
-                  and crop monitoring.
-                </li>
+          <Card
+            title="Turtlebot3 Navigation & Localization in Gazebo"
+            meta="Autonomous behaviors in simulated ROS / Gazebo environments"
+            tags={["ROS", "Gazebo", "PID Control", "RRT", "Localization", "Turtlebot3"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Developed and tested autonomous behaviors on Turtlebot3 in simulated ROS/Gazebo environments.</li>
+              <li>Implemented PID control for navigation, localization, and goal-seeking across 5 different environments.</li>
+              <li>Applied RRT (Rapidly-exploring Random Tree) for path planning.</li>
+            </ul>
+          </Card>
 
-                <li>
-                  Designed embedded control architecture for sensor interfacing,
-                  actuation, and robot navigation.
-                </li>
+          <Card
+            title="Industrial Robotics: Dual-Arm Punching Robot"
+            meta="Mechanical design and motor-driven actuation"
+            tags={["Robotics", "Mechanical Design", "Rack and Pinion"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Built a dual-arm punching robot performing alternating back-and-forth motion using a single motor via a rack and pinion system.</li>
+            </ul>
+          </Card>
 
-                <li>
-                  Focused on scalable automation concepts for precision
-                  agriculture.
-                </li>
-              </ul>
-            </div>
+          <Card
+            title="SCADA Project: Radar Detection System"
+            meta="Hardware ultrasonic sensing with live LabView visualization"
+            tags={["Arduino UNO", "HC-SR04", "LabView", "SCADA", "Ultrasonic Sensing"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Developed a hardware system detecting ultrasonic waves via an HC-SR04 sensor controlled by an Arduino UNO programmed in Arduino IDE.</li>
+              <li>Visualized object proximity data live on LabView with a 2 cm accuracy.</li>
+            </ul>
+          </Card>
 
-            <MediaGrid items={mediaAgrobot} />
+          <Card
+            title="Mechatronics Project: PID Speed Control of DC Motor"
+            meta="Closed-loop motor control with Arduino"
+            tags={["PID Control", "Arduino UNO", "Embedded Systems", "Control Systems"]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Implemented a PID-based closed-loop speed controller for a DC motor using Arduino UNO.</li>
+              <li>Achieved stable target RPM tracking within 5% steady-state error.</li>
+            </ul>
           </Card>
 
           <Card
             title="Computer Vision & AI Projects"
             meta="ML-based perception systems and intelligent detection pipelines"
-            tags={[
-              "Machine Learning",
-              "OpenCV",
-              "Python",
-              "Deep Learning",
-            ]}
+            tags={["Machine Learning", "OpenCV", "Python", "Deep Learning", "Computer Vision"]}
           >
-            <div>
-              <ul className="list-disc ml-5 space-y-1">
-                <li>
-                  Built computer vision systems using OpenCV and Python for
-                  object detection and image analysis tasks.
-                </li>
-
-                <li>
-                  Worked with machine learning workflows involving data
-                  preprocessing, model evaluation, and inference pipelines.
-                </li>
-
-                <li>
-                  Applied AI concepts toward robotics perception and automation.
-                </li>
-              </ul>
-            </div>
-
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Built computer vision systems using OpenCV and Python for object detection and image analysis tasks.</li>
+              <li>Worked on ML workflows involving data preprocessing, model evaluation, and inference pipelines.</li>
+              <li>Applied AI-driven perception techniques toward robotics automation.</li>
+            </ul>
             <MediaGrid items={mediaCV} />
           </Card>
 
-          <Card
-            title="Automation & Manufacturing Engineering"
-            meta="Manufacturing systems, optimization, and engineering workflows"
-            tags={[
-              "Manufacturing",
-              "Automation",
-              "Process Engineering",
-              "CAD",
-            ]}
-          >
-            <div>
-              <ul className="list-disc ml-5 space-y-1">
-                <li>
-                  Worked on engineering projects focused on manufacturing
-                  optimization and automation workflows.
-                </li>
-
-                <li>
-                  Applied engineering analysis and design methodologies to
-                  improve operational efficiency.
-                </li>
-
-                <li>
-                  Utilized CAD and technical engineering tools during project
-                  development and prototyping.
-                </li>
-              </ul>
-            </div>
-
-            <MediaGrid items={mediaManufacturing} />
-          </Card>
         </div>
       </Section>
 
       {/* RESEARCH */}
       <Section
         id="research"
-        title="Research & Publications"
+        title="Publications & Certifications"
         subtitle=""
       >
-        <Card
-          title="Research Experience"
-          meta="Robotics, automation, AI, and intelligent systems"
-          tags={[
-            "Research",
-            "Robotics",
-            "AI",
-            "Automation",
-          ]}
-        >
-          <div className="text-sm text-gray-800 leading-relaxed">
-            My research interests include robotics, intelligent autonomous
-            systems, computer vision, and AI-driven automation. I am
-            particularly interested in the intersection of robotics and
-            manufacturing systems, with emphasis on scalable real-world
-            deployment.
-          </div>
-        </Card>
+        <div className="grid grid-cols-1 gap-6">
+
+          <Card
+            title="Journal Publication — World Scientific"
+            meta="Innovation and Emerging Technologies"
+            tags={["Publication", "Biomimicry", "Pneumatic Control", "Grippers", "Robotics"]}
+            links={[]}
+          >
+            <p>
+              Gangakhedkar, A. et al., <em>"Exploring Biomimicry in Robotic Systems: Nature-Inspired Pneumatic Control
+              and Gripper for Enhanced Pick-and-Place Efficiency."</em> Innovation and Emerging Technologies, World Scientific.
+            </p>
+          </Card>
+
+          <Card
+            title="Certifications"
+            meta=""
+            tags={[]}
+          >
+            <ul className="list-disc ml-5 space-y-1">
+              <li>Robot Safety (Oct 2023)</li>
+              <li>MATLAB Onramp (2023)</li>
+              <li>Simulink Onramp (2023)</li>
+              <li>Digital Manufacturing (Jul 2023, Oct 2023)</li>
+              <li>Advanced Manufacturing (Jul 2023)</li>
+              <li>3D CAD (Dec 2021)</li>
+              <li>Fusion 360 (Apr 2022)</li>
+              <li>3D Printing (Mar 2023)</li>
+            </ul>
+          </Card>
+
+        </div>
       </Section>
 
       {/* SKILLS */}
@@ -450,7 +479,6 @@ export default function Home() {
               className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm"
             >
               <div className="text-sm font-semibold">{g.title}</div>
-
               <div className="mt-3 flex flex-wrap gap-2">
                 {g.items.map((s) => (
                   <Pill key={s}>{s}</Pill>
@@ -461,38 +489,41 @@ export default function Home() {
         </div>
       </Section>
 
+      {/* EXTRACURRICULARS */}
+      <Section id="extra" title="Extracurricular Activities" subtitle="">
+        <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm text-sm text-gray-800 leading-relaxed space-y-2">
+          <p>🎙️ Worked as a <strong>sports journalist</strong> and provided statistics for sports broadcasts at <strong>Sony Sports India</strong>.</p>
+          <p>🧗 Member of <strong>Buffalo's Central Rock Climbing Team</strong> and <strong>UB's Outdoor Adventure Club</strong>.</p>
+        </div>
+      </Section>
+
       {/* CONTACT */}
       <Section id="contact" title="Contact" subtitle="">
         <div className="rounded-2xl border border-gray-200 bg-white p-5 shadow-sm text-sm">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
 
             <div>
               <div className="text-xs text-gray-500">Email</div>
-
               <a
                 className="text-blue-600 underline underline-offset-4"
-                href="mailto:your_email@example.com"
+                href="mailto:akshayg20002@gmail.com"
               >
-                your_email@example.com
+                akshayg20002@gmail.com
               </a>
             </div>
 
             <div>
-              <div className="text-xs text-gray-500">GitHub</div>
-
+              <div className="text-xs text-gray-500">Phone</div>
               <a
                 className="text-blue-600 underline underline-offset-4"
-                href="https://github.com/yourgithub"
-                target="_blank"
-                rel="noreferrer"
+                href="tel:+17166171612"
               >
-                github.com/yourgithub
+                +1 (716) 617-1612
               </a>
             </div>
 
             <div>
               <div className="text-xs text-gray-500">LinkedIn</div>
-
               <a
                 className="text-blue-600 underline underline-offset-4"
                 href="https://linkedin.com/in/yourlinkedin"
@@ -500,6 +531,16 @@ export default function Home() {
                 rel="noreferrer"
               >
                 linkedin.com/in/yourlinkedin
+              </a>
+            </div>
+
+            <div>
+              <div className="text-xs text-gray-500">Portfolio</div>
+              <a
+                className="text-blue-600 underline underline-offset-4"
+                href="#top"
+              >
+                This site
               </a>
             </div>
 
